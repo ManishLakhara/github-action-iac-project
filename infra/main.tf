@@ -93,6 +93,10 @@ resource "aws_instance" "web" {
               # Create CloudWatch Agent config
               cat > /opt/aws/amazon-cloudwatch-agent/bin/config.json << CWAGENTCONFIG
               {
+                "agent": {
+                  "metrics_collection_interval": 60,
+                  "run_as_user": "root"
+                },
                 "metrics": {
                   "metrics_collected": {
                     "disk": {
