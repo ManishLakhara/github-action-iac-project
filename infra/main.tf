@@ -58,7 +58,6 @@ resource "aws_instance" "web" {
               systemctl start docker
               systemctl enable docker
               usermod -aG docker ec2-user
-              docker run -d -p 80:80 nginx
               EOF
   tags = {
     Name = "github-action-iac-ec2"
