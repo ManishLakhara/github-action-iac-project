@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route('/version')
 def version():
-    return jsonify({"version": "1.2.0"})
+    return jsonify({"version": "1.2.1"})
 # add route at root with message "Happy Dipawali!!"
 @app.route('/')
 def home():
