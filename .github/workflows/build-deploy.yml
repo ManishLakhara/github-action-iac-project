@@ -40,9 +40,6 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
             docker pull kubemozilla/python-app:latest
-            # remove ngnix container if running
-            docker stop nginx || true
-            docker rm nginx || true
 
             # remove old python-app container if running
             docker stop python-app || true
